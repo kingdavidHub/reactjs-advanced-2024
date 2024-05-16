@@ -4,6 +4,8 @@ import ModeToggler from "./components/ModeToggler";
 import MealProvider from "./provider/MealProvider";
 import MealList from "./components/MealList";
 import MealsCounter from "./components/MealsCounter";
+import ReducerHook from "./components/ReducerHook";
+import MealProvider2 from "./provider/MealProvider2";
 
 const App = () => {
   const clickHandler = () => {
@@ -14,12 +16,18 @@ const App = () => {
     <>
       {/* <ModeToggler /> */}
       {/* <Counter clickHandler={clickHandler} /> */}
-      <div>
+      {/* <div>
         <MealProvider>
           <MealList />
           <MealsCounter />
         </MealProvider>
-      </div>
+      </div> */}
+
+      <MealProvider2>
+        <MealList />
+        <MealsCounter />
+      </MealProvider2>
+      {/* <ReducerHook /> */}
     </>
   );
 };
