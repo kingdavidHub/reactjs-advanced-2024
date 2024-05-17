@@ -102,3 +102,28 @@ button:focus-visible {
   flex-direction: column;
   gap: 30px;
 }
+
+
+.video-container {
+  /* height: 100vh; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.video-container h1 {
+  padding: 2rem;
+}
+
+.video-container video,
+.video-container .react-player{
+  max-width: 550px;
+  /* width: 400px; */
+  border-radius: 15px;
+}
+
+@media (min-width: 780px){
+  .video-container {
+    height: 100vh;
+  }
+}

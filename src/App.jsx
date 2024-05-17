@@ -12,6 +12,9 @@ import About from "./pages/About";
 import HomePage from "./pages/HomePage";
 import RootLayout from "./layout/RootLayout";
 import ErrorPage from "./pages/ErrorPage";
+import DateToday from "./components/DateToday";
+import LocalVideo from "./components/LocalVideo";
+import CalculatorApp from "./components/CalculatorApp";
 
 // router an array of links
 const router = createBrowserRouter([
@@ -65,6 +68,13 @@ const App = () => {
       {/* <ReducerHook /> */}
 
        {/* <RouterProvider router={router} />    */}
+       {/* <DateToday /> */}
+
+       {/* Loading Local video */}
+       {/* <LocalVideo /> */}
+
+       {/* Calculator App */}
+       <CalculatorApp />
     </>
   );
 };
