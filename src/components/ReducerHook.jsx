@@ -17,12 +17,12 @@ const reducer = (state, action) => {
 
 const ReducerHook = () => {
   const initialState = { money: 100 };
-  const [state, dispatch ] = useReducer(reducer, initialState);
+  const [state, dispatch] = useReducer(reducer, initialState);
 
   return (
     <>
       <div>
-        <h1>Wallet: {state.money}</h1>
+        <h1>Wallet: {state.money < 0 ? 0 : state.money}</h1>
         <div>
           <button onClick={() => dispatch({ type: "ride" })}>
             A new customer
