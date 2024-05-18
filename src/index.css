@@ -75,7 +75,6 @@ button:focus-visible {
   }
 }
 
-
 /* Navbar */
 
 .navbar {
@@ -103,7 +102,6 @@ button:focus-visible {
   gap: 30px;
 }
 
-
 .video-container {
   /* height: 100vh; */
   display: flex;
@@ -116,14 +114,42 @@ button:focus-visible {
 }
 
 .video-container video,
-.video-container .react-player{
+.video-container .react-player {
   max-width: 550px;
   /* width: 400px; */
   border-radius: 15px;
 }
 
-@media (min-width: 780px){
+@media (min-width: 780px) {
   .video-container {
     height: 100vh;
   }
+}
+
+form {
+  max-width: 350px;
+  margin: 20px;
+}
+
+form fieldset {
+  padding: 20px;
+  border-radius: 15px;
+}
+
+form .field {
+  margin-bottom: 0.5rem;
+}
+
+form .field input {
+  height: 20px;
+  max-width: 75%;
+}
+
+form button[type="submit"] {
+  width: 100%;
+  margin: 10px 0;
+  text-transform: uppercase;
+  font-weight: bold;
+  outline: none;
+  border: none;
 }

@@ -16,6 +16,7 @@ import DateToday from "./components/DateToday";
 import LocalVideo from "./components/LocalVideo";
 import CalculatorApp from "./components/CalculatorApp";
 import TodoApp from "./components/Todo/TodoApp";
+import FormComponent from "./components/FormComponent";
 
 // router an array of links
 const router = createBrowserRouter([
@@ -78,7 +79,9 @@ const App = () => {
        {/* <CalculatorApp /> */}
 
        {/* Todo App Managing keys in react */}
-       <TodoApp />
+       {/* <TodoApp /> */}
+
+       <FormComponent />
     </>
   );
 };
