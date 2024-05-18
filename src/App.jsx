@@ -15,6 +15,7 @@ import ErrorPage from "./pages/ErrorPage";
 import DateToday from "./components/DateToday";
 import LocalVideo from "./components/LocalVideo";
 import CalculatorApp from "./components/CalculatorApp";
+import TodoApp from "./components/Todo/TodoApp";
 
 // router an array of links
 const router = createBrowserRouter([
@@ -74,7 +75,10 @@ const App = () => {
        {/* <LocalVideo /> */}
 
        {/* Calculator App */}
-       <CalculatorApp />
+       {/* <CalculatorApp /> */}
+
+       {/* Todo App Managing keys in react */}
+       <TodoApp />
     </>
   );
 };
