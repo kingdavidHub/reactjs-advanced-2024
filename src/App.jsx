@@ -7,7 +7,7 @@ import MealsCounter from "./components/MealsCounter";
 import ReducerHook from "./components/ReducerHook";
 import MealProvider2 from "./provider/MealProvider2";
 import Navbar from "./components/navbar/Navbar";
-import { createBrowserRouter, RouterProvider  } from "react-router-dom";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import About from "./pages/About";
 import HomePage from "./pages/HomePage";
 import RootLayout from "./layout/RootLayout";
@@ -17,6 +17,10 @@ import LocalVideo from "./components/LocalVideo";
 import CalculatorApp from "./components/CalculatorApp";
 import TodoApp from "./components/Todo/TodoApp";
 import FormComponent from "./components/FormComponent";
+import Feedback from "./components/Feedback";
+import GaolTracker from "./components/GaolTracker";
+import ShoppingCart from "./components/ShoppingCart";
+import WelcomeSideEffect from "./components/WelcomeSideEffect";
 
 // router an array of links
 const router = createBrowserRouter([
@@ -27,13 +31,13 @@ const router = createBrowserRouter([
     children: [
       {
         path: "/",
-        element: <HomePage />
+        element: <HomePage />,
       },
       {
         path: "/about-me",
-        element: <About />
-      }
-    ]
+        element: <About />,
+      },
+    ],
   },
   {
     path: "/about-me",
@@ -42,10 +46,9 @@ const router = createBrowserRouter([
         <Navbar />
         <About />
       </>
-    )
-  }
-])
-
+    ),
+  },
+]);
 
 const App = () => {
   const clickHandler = () => {
@@ -69,19 +72,25 @@ const App = () => {
       </MealProvider2> */}
       {/* <ReducerHook /> */}
 
-       {/* <RouterProvider router={router} />    */}
-       {/* <DateToday /> */}
+      {/* <RouterProvider router={router} />    */}
+      {/* <DateToday /> */}
 
-       {/* Loading Local video */}
-       {/* <LocalVideo /> */}
+      {/* Loading Local video */}
+      {/* <LocalVideo /> */}
 
-       {/* Calculator App */}
-       {/* <CalculatorApp /> */}
+      {/* Calculator App */}
+      {/* <CalculatorApp /> */}
 
-       {/* Todo App Managing keys in react */}
-       {/* <TodoApp /> */}
+      {/* Todo App Managing keys in react */}
+      {/* <TodoApp /> */}
 
-       <FormComponent />
+      {/* <FormComponent /> */}
+      {/* <Feedback /> */}
+      {/* <GaolTracker /> */}
+
+      {/* Handling side effect */}
+      {/* <ShoppingCart count={1} price={20} /> */}
+      <WelcomeSideEffect />
     </>
   );
 };
