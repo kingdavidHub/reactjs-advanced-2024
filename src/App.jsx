@@ -24,6 +24,8 @@ import WelcomeSideEffect from "./components/WelcomeSideEffect";
 import FetchUserData from "./components/FetchUserData";
 import AddToCart from "./components/AddToCart";
 import ExpenseTracker from "./components/ExpenseTracker";
+import DomUseRef from "./components/DomUseRef";
+import ModalDialog from "./components/ModalDialog";
 
 // router an array of links
 const router = createBrowserRouter([
@@ -96,9 +98,12 @@ const App = () => {
       {/* <WelcomeSideEffect /> */}
       {/* <FetchUserData url={'https://randomuser.me/api/'}/> */}
 
-      {/* useing useReducer very intresting in making complex state changes and updates  */}
+      {/* using useReducer very interesting in making complex state changes and updates  */}
       {/* <ExpenseTracker /> */}
-      <AddToCart />
+      {/* <AddToCart /> */}
+
+      {/* <DomUseRef /> */}
+      <ModalDialog />
     </>
   );
 };
