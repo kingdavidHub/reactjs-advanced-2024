@@ -1,5 +1,8 @@
 import React, { useReducer } from "react";
 
+const IPHONE_PRICE = 100;
+const SAMSUNG_PRICE = 1000;
+
 const reducer = (state, action) => {
   const { total, iphoneQuantity, samsungQuantity } = state;
 
@@ -7,37 +10,33 @@ const reducer = (state, action) => {
     case "buy_iphone":
     case "add_iphone":
       return {
-        total: Math.max(total + 100, 0),
+        ...state,
+        total: Math.max(total + IPHONE_PRICE, 0),
         iphoneQuantity: iphoneQuantity + 1,
-        samsungQuantity: samsungQuantity,
       };
 
     case "buy_samsung":
     case "add_samsung":
       return {
-        total: total + 1000,
-        iphoneQuantity: iphoneQuantity,
+        ...state,
+        total: total + SAMSUNG_PRICE,
         samsungQuantity: samsungQuantity + 1,
       };
+    case "rm_iphone":
+      return {
+        ...state,
+        total: Math.max(total - 100, 0),
+        iphoneQuantity: Math.max(iphoneQuantity - 1, 0),
+      };
+    case "rm_samsung":
+      return {
+        ...state,
+        total: Math.max(total - 1000, 0),
+        samsungQuantity: Math.max(samsungQuantity - 1, 0),
+      };
+    default:
+      return state;
   }
-
-  if (action.type === "rm_iphone") {
-    return {
-      total: Math.max(total - 100, 0),
-      iphoneQuantity: Math.max(iphoneQuantity - 1, 0),
-      samsungQuantity: samsungQuantity,
-    };
-  }
-
-  if (action.type === "rm_samsung") {
-    return {
-      total: Math.max(total - 1000, 0),
-      iphoneQuantity: iphoneQuantity,
-      samsungQuantity: Math.max(samsungQuantity - 1, 0),
-    };
-  }
-
-  return state;
 };
 
 const AddToCart = () => {
