@@ -21,6 +21,9 @@ import Feedback from "./components/Feedback";
 import GaolTracker from "./components/GaolTracker";
 import ShoppingCart from "./components/ShoppingCart";
 import WelcomeSideEffect from "./components/WelcomeSideEffect";
+import FetchUserData from "./components/FetchUserData";
+import AddToCart from "./components/AddToCart";
+import ExpenseTracker from "./components/ExpenseTracker";
 
 // router an array of links
 const router = createBrowserRouter([
@@ -51,9 +54,9 @@ const router = createBrowserRouter([
 ]);
 
 const App = () => {
-  const clickHandler = () => {
-    console.log("Hi there function coming from parent component");
-  };
+  // const clickHandler = () => {
+  //   console.log("Hi there function coming from parent component");
+  // };
 
   return (
     <>
@@ -90,7 +93,12 @@ const App = () => {
 
       {/* Handling side effect */}
       {/* <ShoppingCart count={1} price={20} /> */}
-      <WelcomeSideEffect />
+      {/* <WelcomeSideEffect /> */}
+      {/* <FetchUserData url={'https://randomuser.me/api/'}/> */}
+
+      {/* useing useReducer very intresting in making complex state changes and updates  */}
+      {/* <ExpenseTracker /> */}
+      <AddToCart />
     </>
   );
 };
