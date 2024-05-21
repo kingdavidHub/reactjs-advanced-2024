@@ -26,6 +26,7 @@ import AddToCart from "./components/AddToCart";
 import ExpenseTracker from "./components/ExpenseTracker";
 import DomUseRef from "./components/DomUseRef";
 import ModalDialog from "./components/ModalDialog";
+import LiveOrders from "./components/LiveOrders";
 
 // router an array of links
 const router = createBrowserRouter([
@@ -54,6 +55,19 @@ const router = createBrowserRouter([
     ),
   },
 ]);
+
+// ! REACT HOOKS
+// * They are special functions that let you use state and they can only be used in functional component( Follow specific rules:) must be called at the top level of the component, not inside loops, conditions, or nested functions.
+// * They are Hooks that manage states in a react component
+
+// ! REACT APIS
+// * React APIs refer to the broader set of functions, classes, and objects provided by the React library that you can use to build React applications. This includes methods for creating components, working with elements, managing context, refs, and more.
+
+// * Can be used in both functional and class components. Provide a range of functionalities beyond state and lifecycle management, including element creation, context management, and more.
+
+// React Hooks: Special functions for functional components to use state and lifecycle methods (useState, useEffect, useContext, etc.).
+// React APIs: The broader set of functionalities provided by React for both functional and class components (React.createElement, React.Component, React.Fragment, etc.).
+// Understanding the distinction and proper usage of React Hooks and React APIs is crucial for effective React development.
 
 const App = () => {
   // const clickHandler = () => {
@@ -103,7 +117,8 @@ const App = () => {
       {/* <AddToCart /> */}
 
       {/* <DomUseRef /> */}
-      <ModalDialog />
+      {/* <ModalDialog /> */}
+      <LiveOrders />
     </>
   );
 };
