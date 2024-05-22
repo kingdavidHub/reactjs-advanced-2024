@@ -27,6 +27,7 @@ import ExpenseTracker from "./components/ExpenseTracker";
 import DomUseRef from "./components/DomUseRef";
 import ModalDialog from "./components/ModalDialog";
 import LiveOrders from "./components/LiveOrders";
+import TaxFromItems from "./components/TaxFromItems";
 
 // router an array of links
 const router = createBrowserRouter([
@@ -118,7 +119,8 @@ const App = () => {
 
       {/* <DomUseRef /> */}
       {/* <ModalDialog /> */}
-      <LiveOrders />
+      {/* <LiveOrders /> */}
+      <TaxFromItems />
     </>
   );
 };
