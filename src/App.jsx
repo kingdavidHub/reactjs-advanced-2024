@@ -28,6 +28,7 @@ import DomUseRef from "./components/DomUseRef";
 import ModalDialog from "./components/ModalDialog";
 import LiveOrders from "./components/LiveOrders";
 import TaxFromItems from "./components/TaxFromItems";
+import WelcomeScreen from "./components/WelcomeScreen";
 
 // router an array of links
 const router = createBrowserRouter([
@@ -120,7 +121,8 @@ const App = () => {
       {/* <DomUseRef /> */}
       {/* <ModalDialog /> */}
       {/* <LiveOrders /> */}
-      <TaxFromItems />
+      {/* <TaxFromItems /> */}
+      <WelcomeScreen />
     </>
   );
 };
