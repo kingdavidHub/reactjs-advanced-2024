@@ -29,6 +29,10 @@ import ModalDialog from "./components/ModalDialog";
 import LiveOrders from "./components/LiveOrders";
 import TaxFromItems from "./components/TaxFromItems";
 import WelcomeScreen from "./components/WelcomeScreen";
+import HocApp from "./components/HocApp";
+import RenderFunc from "./components/RenderFunc";
+import ReactTest from "./components/ReactTest";
+import FeedbackApp from "./components/Feedback/FeedbackApp";
 
 // router an array of links
 const router = createBrowserRouter([
@@ -122,7 +126,21 @@ const App = () => {
       {/* <ModalDialog /> */}
       {/* <LiveOrders /> */}
       {/* <TaxFromItems /> */}
-      <WelcomeScreen />
+      {/* <WelcomeScreen /> */}
+      {/* 
+      
+          Higher order components(HOC) is a function that takes a component and returns a new component 
+
+        component transforms props into UI
+          A HOC extends the functionality of a component and returns a new component
+      
+      */}
+      {/* <HocApp /> */}
+      {/* <RenderFunc /> */}
+
+      {/* Using react testing libary and JEST to test your components */}
+      {/* <ReactTest /> */}
+      <FeedbackApp />
     </>
   );
 };
