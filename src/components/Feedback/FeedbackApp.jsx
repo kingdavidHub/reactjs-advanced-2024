@@ -2,8 +2,8 @@ import React from 'react'
 import FeedbackForm from './FeedbackForm';
 
 const FeedbackApp = () => {
-  const handleSubmit = () => {
-    console.log("Form is submited");
+  const handleSubmit = (submitDetails) => {
+    console.log("Form is submited", submitDetails);
   }
   return (
     <>

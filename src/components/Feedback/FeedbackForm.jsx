@@ -1,10 +1,10 @@
 import React, { useState } from "react";
 
 const FeedbackForm = ({ onSubmit }) => {
-  const [score, setscore] = useState("5");
+  const [score, setScore] = useState("5");
   const [comment, setComment] = useState("");
 
-  const isDisabled = Number(score) < 5 && comment.length < 10;
+  const isDisabled = Number(score) < 5 && comment.length <= 10;
 
   const textAreaPlaceHolder = isDisabled
     ? "Please provide a comment explaining why the experience was not good. Minimum length is 10 characters"
@@ -12,7 +12,9 @@ const FeedbackForm = ({ onSubmit }) => {
 
   const formHandler = (e) => {
     e.preventDefault();
-    onSubmit();
+    onSubmit({score, comment});
+    setScore("5");
+    setComment("");
   };
 
   const labelStyles = {
@@ -41,7 +43,7 @@ const FeedbackForm = ({ onSubmit }) => {
               min="1"
               max="10"
               value={score}
-              onChange={(e) => setscore(e.target.value)}
+              onChange={(e) => setScore(e.target.value)}
             />
 
             <div className="comment">
